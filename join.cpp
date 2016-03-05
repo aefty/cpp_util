@@ -1,8 +1,8 @@
 
-#ifndef __STRINGCHOP_H__
-#define __STRINGCHOP_H__
+#ifndef __JOIN_H__
+#define __JOIN_H__
 
-namespace std_plus {
+namespace cpp_util {
 
      template <class T>
      string vector_join( const vector<T>& v, const string& token ) {

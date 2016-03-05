@@ -1,10 +1,7 @@
 #ifndef __PRINT_H__
 #define __PRINT_H__
 
-namespace std_plus {
-
-
-
+namespace cpp_util {
 
   void print_vec(vector<vector<int>>& A, string varName = "") {
     cout << varName << ":" << endl;
@@ -16,7 +13,6 @@ namespace std_plus {
     }
     cout << endl;
   }
-
 
   void print_vec(vector<int>& A, string varName = "") {
     cout << varName << ":[ ";
@@ -34,7 +30,6 @@ namespace std_plus {
     cout << A[A.size() - 1] << " ]" << endl;
   }
 
-
   void print_vec(const double* A, int size, string varName = "") {
     cout << varName << ":[ ";
     for (int i = 0; i < size - 1; ++i) {
@@ -43,7 +38,6 @@ namespace std_plus {
     cout << A[size - 1] << " ]" << endl;
   }
 
-
   void print_vec(const int* A, int size, string varName = "") {
     cout << varName << ":[ ";
     for (int i = 0; i < size - 1; ++i) {
@@ -51,7 +45,5 @@ namespace std_plus {
     }
     cout << A[size - 1] << " ]" << endl;
   }
-
-
 }
 #endif

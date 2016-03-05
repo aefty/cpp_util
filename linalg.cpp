@@ -1,20 +1,15 @@
 #ifndef __LINALG_H__
 #define __LINALG_H__
 
-namespace std_plus {
-
-
-
+namespace cpp_util {
 
   double linalg_dot(vector<double>& A , vector<double>& B) {
     double rtrn = 0;
     for (int i = 0; i < A.size(); ++i) {
       rtrn += A[i] * B[i];
     }
-
     return rtrn;
   }
-
 
   double linalg_l2(vector<double>& A) {
     double rtrn = 0;
@@ -44,13 +39,11 @@ namespace std_plus {
     }
   }
 
-
   void linalg_less(double* A,  vector<double>& B) {
     for (int i = 0; i < B.size(); ++i) {
       A[i] -= B[i];
     }
   }
-
 
   void linalg_add(double* A, vector<double>& B) {
     for (int i = 0; i < B.size(); ++i) {
@@ -58,13 +51,11 @@ namespace std_plus {
     }
   }
 
-
   void linalg_add(vector<double>& A,  vector<double>& B) {
     for (int i = 0; i < A.size(); ++i) {
       A[i] += B[i];
     }
   }
-
 
   void linalg_add(vector<double>& A,  vector<double>& B, vector<double>& rtrn) {
     for (int i = 0; i < A.size(); ++i) {
@@ -78,5 +69,4 @@ namespace std_plus {
     }
   }
 }
-
 #endif

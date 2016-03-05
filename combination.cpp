@@ -8,12 +8,10 @@
 // the use of this source code. Use it at your own risk!
 //=======================================================
 
-
 #ifndef __COMBINATION_H__
 #define __COMBINATION_H__
 
-
-namespace std_plus {
+namespace cpp_util {
 
   // Non recursive template function
   template <class BidIt>
