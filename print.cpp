@@ -5,11 +5,11 @@ namespace cpp_util {
   bool IGNORE_PRINT = false;
 
   // Constant
-  void printd(double* A, string varName = "") {
+  void printd(double A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ": " << A << endl;
   }
-  void printd(int* A, string varName = "") {
+  void printd(int A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ": " << A << endl;
   }
