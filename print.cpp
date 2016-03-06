@@ -2,7 +2,7 @@
 #define __PRINT_H__
 
 namespace cpp_util {
-  bool IGNORE_PRINT = FALSE;
+  bool IGNORE_PRINT = false;
 
   // Constant
   void printd(double* A, string varName = "") {
