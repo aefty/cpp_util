@@ -1,21 +1,22 @@
 #ifndef __PRINT_H__
 #define __PRINT_H__
 
+#define IGNORE_PRINT false
+
 namespace cpp_util {
-  bool IGNORE_PRINT = false;
 
   // Constant
-  void printd(double A, string varName = "") {
+  inline void printd(double A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ": " << A << endl;
   }
-  void printd(int A, string varName = "") {
+  inline void printd(int A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ": " << A << endl;
   }
 
   // 2D Vector
-  void printd(vector<vector<int>>& A, string varName = "") {
+  inline void printd(vector<vector<int>>& A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ":" << endl;
     for (int i = 0; i < A.size(); ++i) {
@@ -28,7 +29,7 @@ namespace cpp_util {
   }
 
   // 1D Vector
-  void printd(vector<int>& A, string varName = "") {
+  inline void printd(vector<int>& A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ":[ ";
     for (int i = 0; i < A.size() - 1; ++i) {
@@ -36,7 +37,7 @@ namespace cpp_util {
     }
     cout << A[A.size() - 1] << " ]" << endl;
   }
-  void printd(vector<double>& A, string varName = "") {
+  inline void printd(vector<double>& A, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ":[ ";
     for (int i = 0; i < A.size() - 1; ++i) {
@@ -44,7 +45,7 @@ namespace cpp_util {
     }
     cout << A[A.size() - 1] << " ]" << endl;
   }
-  void printd(const double* A, int size, string varName = "") {
+  inline void printd(const double* A, int size, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ":[ ";
     for (int i = 0; i < size - 1; ++i) {
@@ -52,7 +53,7 @@ namespace cpp_util {
     }
     cout << A[size - 1] << " ]" << endl;
   }
-  void printd(const int* A, int size, string varName = "") {
+  inline void printd(const int* A, int size, string varName = "") {
     if (IGNORE_PRINT) { return; }
     cout << varName << ":[ ";
     for (int i = 0; i < size - 1; ++i) {
@@ -62,13 +63,13 @@ namespace cpp_util {
   }
 
   // Print seperation Line
-  void printd() {
+  inline void printd() {
     if (IGNORE_PRINT) { return; }
     cout << "========================================" << endl;
   }
 
   // Print message
-  void printd(string message) {
+  inline void printd(string message) {
     if (IGNORE_PRINT) { return; }
     cout << message << endl;
   }

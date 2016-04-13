@@ -1,14 +1,26 @@
+#ifndef cpp_util_h_is_included
+#define cpp_util_h_is_included
 
-#include <stdio.h>   // Library to perform Input/Output operations
-#include <stdlib.h>  // Standard General Utilities Library
-#include <iostream>  // Input/Output library
-#include <vector>    // Vectors
-#include <cmath>     // Math
-#include <string>    // Strings
-#include <algorithm> // Algorithm for permutations, find, ... etc
+//Standard General Utilities Library
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
 
-#include "combination.cpp"
-#include "contains.cpp"
-#include "linalg.cpp"
-#include "print.cpp"
-#include "join.cpp"
+//Data structures and algorithem
+#include <vector>
+#include <cmath>
+#include <string>
+#include <map>
+#include <algorithm>
+
+#include <sstream>
+
+using namespace std;
+
+#include "combination.h"
+#include "contains.h"
+#include "linalg.h"
+#include "print.h"
+#include "join.h"
+
+#endif
