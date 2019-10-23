@@ -1,3 +1,4 @@
+
 //=======================================================
 // combination.h
 // Description : Template class to find combinations
@@ -11,13 +12,12 @@
 #ifndef __COMBINATION_H__
 #define __COMBINATION_H__
 
-namespace cpp_util {
+namespace util_combination {
 
-  // Non recursive template function
+// Non recursive template function
   template <class BidIt>
 
-  inline bool next_combination(BidIt n_begin, BidIt n_end,
-                               BidIt r_begin, BidIt r_end) {
+  inline bool next(BidIt n_begin, BidIt n_end, BidIt r_begin, BidIt r_end) {
 
     bool boolmarked = false;
     BidIt r_marked;
@@ -65,15 +65,10 @@ namespace cpp_util {
     return true;//will never reach here
   }
 
-  // Non recursive template function with Pred
+// Non recursive template function with Pred
   template <class BidIt, class Prediate>
 
-  inline bool next_combination(
-    BidIt n_begin,
-    BidIt n_end,
-    BidIt r_begin,
-    BidIt r_end,
-    Prediate Equal) {
+  inline bool next(BidIt n_begin, BidIt n_end, BidIt r_begin, BidIt r_end, Prediate Equal) {
 
     bool boolmarked = false;
     BidIt r_marked;
@@ -121,12 +116,10 @@ namespace cpp_util {
     return true;//will never reach here
   }
 
-
-  // Non recursive template function
+// Non recursive template function
   template <class BidIt>
 
-  inline bool prev_combination(BidIt n_begin, BidIt n_end,
-                               BidIt r_begin, BidIt r_end) {
+  inline bool prev(BidIt n_begin, BidIt n_end, BidIt r_begin, BidIt r_end) {
 
     bool boolsame = false;
     BidIt marked;//for r
@@ -193,16 +186,10 @@ namespace cpp_util {
     return false;//Will never reach here, unless error
   }
 
-
-  // Non recursive template function with Pred
+// Non recursive template function with Pred
   template <class BidIt, class Prediate>
 
-  inline bool prev_combination(
-    BidIt n_begin,
-    BidIt n_end,
-    BidIt r_begin,
-    BidIt r_end,
-    Prediate Equal) {
+  inline bool prev(BidIt n_begin, BidIt n_end, BidIt r_begin, BidIt r_end, Prediate Equal) {
 
     bool boolsame = false;
     BidIt marked;//for r
@@ -269,12 +256,10 @@ namespace cpp_util {
     return false;//Will never reach here, unless error
   }
 
-
-  // Recursive template function
+// Recursive template function
   template <class RanIt, class Func>
 
-  void recursive_combination(RanIt nbegin, RanIt nend, int n_column,
-                             RanIt rbegin, RanIt rend, int r_column, int loop, Func func) {
+  void recursive(RanIt nbegin, RanIt nend, int n_column, RanIt rbegin, RanIt rend, int r_column, int loop, Func func) {
 
     int r_size = rend - rbegin;
 
@@ -309,7 +294,6 @@ namespace cpp_util {
                             rbegin, rend, r_column + 1, localloop, func);
       --localloop;
     }
-
   }
 
 }
